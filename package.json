@@ -1,0 +1,24 @@
+{
+  "name": "hrm2json",
+  "version": "0.0.1",
+  "author": "Cyril Gravelier <cyril@18ruedivona.eu>",
+  "description": "Convert Polar HRM file to Json",
+  "scripts": {
+    "test": "make test"
+  },
+  "main": "hrm2json.js",
+  "repository": "",
+  "keywords": [
+    "hrm",
+    "json",
+    "polar",
+    "heart",
+    "rate"
+  ],
+  "dependencies" : {
+  },
+  "devDependencies": {
+    "mocha"    :  "latest"
+  },
+  "license": "BSD"
+}

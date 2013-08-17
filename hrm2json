@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+var hrm2json = require('./'),
+    fs = require('fs'),
+    argv = process.argv;
+
+// Remove the two first argv ("node", "hrm2json").
+argv.shift()
+argv.shift();
+
+process.argv.forEach(function(arg, i, array) {
+    console.log(JSON.stringify(hrm2json.parse(fs.readFileSync(arg, 'utf8'))));
+});
+/*
+if (!f) {
+    if (filename.match(/\.hrm$/i)) f = 'hrm';
+}
+
+if (!f) {
+    return console.error('could not determine format of file ' +
+        filename + '. please specify a format manually with -f');
+}
+
+console.log(JSON.stringify(tj[f](jsdom(fs.readFileSync(filename, 'utf8'))), null, 4));
+*/
